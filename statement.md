@@ -4,7 +4,7 @@ Many of you reading this have probably come from [Code in Game](https://www.codi
 If this is the case, or if you're just curious, then you might be interested in learning some of the basics of working with your own files. The good news is that this is incredibly easy! There are essentially only 4 things you need to do in order use your own data in your own python scripts.
 
 * Import os
-* open(path, "action")
+* open(filePath, "mode")
 * parse the data from the file
 * close()
 
