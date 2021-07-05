@@ -16,6 +16,18 @@ At the beginning of your script you need to include ```import os```. This will a
 
 ## Open
 
+The os.open function is fairly simple. It only requires one parameter, a string defining the location of the file that you are interested in using. By default python opens the file as **read** only. This means that you can access all of the data contained within the file, but you cannot change or update the file itself. If you want to **write** data to the file, then you need to pass an additional parameter.
+
+```python
+import os
+
+# all data from file1 can be read, but the file itself cannot be altered 
+file1 = open("\\path\\to\\file\\file2.txt")
+
+# additional data can be written to file2 
+file2 = open("\\path\\to\\file\\file2.txt", "w")
+```
+
 ## Close
 
 ## How to Actually Get Your Data
