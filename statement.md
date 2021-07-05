@@ -1,7 +1,7 @@
 # Input/Output (I/O)
 
 Many of you reading this have probably come from [Code in Game](https://www.codingame.com/), where most of the file management has been automated for you. However, as you progress through different community puzzles you may want to work out more complex examples for yourself or even make your own contributions. 
-If this is the case, or if you're just curious, then you might be interested in learning some of the basics of working with your own files. The good news is that this is incredibly easy! There are essentially only 4 things you need to do in order use your own data in your own python scripts.
+If this is the case, or if you're just curious, then you might be interested in learning some of the basics of working with your own files. The good news is that this is incredibly easy! There are essentially only 4 things you need to do in order use your own data in a python script.
 
 * Import os
 * open(filePath, "mode")
