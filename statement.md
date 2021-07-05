@@ -16,23 +16,40 @@ At the beginning of your script you need to include ```import os```. This will a
 
 ## Open
 
-The os.open function is fairly simple. It only requires one parameter, a string defining the location of the file that you are interested in using. By default python opens the file as **read** only. This means that you can access all of the data contained within the file, but you cannot change or update the file itself. If you want to **write** data to the file, then you need to pass an additional parameter.
+The os.open function is fairly simple. It only requires one parameter, a string defining the location of the file that you are interested in using. By default python opens the file as **read** only. This means that you can access all of the data contained within the file, but you cannot change or update the file itself. If you want to **write** data to the file, then you need to pass an additional parameter. Additional acceptable **mode** parameter values include: "**x**", "**a**", "**b**", "**t**", and "**+**".
 
 ```python
 import os
 
 # all data from file1 can be read, but the file itself cannot be altered 
-file1 = open("\\path\\to\\file\\file2.txt")
+file1 = open("\\path\\to\\file\\file1.txt")
 
 # additional data can be written to file2 
 file2 = open("\\path\\to\\file\\file2.txt", "w")
+
+# file3 is also read only, like file1
+file3 = open("\\path\\to\\file\\file3.txt", "r")
 ```
 
 ## Close
 
-## How to Actually Get Your Data
+Best practice when dealing with files is to close any file that you have opened before your script finishes executing. This is done using the close function.
 
-This is arguably the most important step in this process. 
+```python
+import os
+
+file = open("\\path\\file.txt")
+
+file.close()
+```
+
+## How to Actually Use Your Data
+
+This is arguably the most important step in this process. There are a lot of different ways to read and write data, and it all depends on the problem you are trying to solve. Sometimes you have written the data files yourself, and other times you will have to work with someone else's formatting. Below are a couple simple examples for reading and writting a simple text file.
+
+### Reading
+
+### Writing
 
 
 # Advanced usage
