@@ -51,6 +51,7 @@ This is arguably the most important step in this process. There are a lot of dif
 
 ### Writing
 
+# sys and input()
 
 # Advanced usage
 
