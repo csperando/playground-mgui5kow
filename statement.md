@@ -31,6 +31,23 @@ file2 = open("\\path\\to\\file\\file2.txt", "w")
 file3 = open("\\path\\to\\file\\file3.txt", "r")
 ```
 
+### File Path String 
+
+When using backslashes in the file path a second `\` character is required to escape the behavior of a single `\` in a string. Depending on your operating system you made need to format this string differently or use forward slashes.
+
+You can also take advantage of the [os.path](https://docs.python.org/3/library/os.path.html) methods.
+
+```python 
+
+import os
+
+pathString = "text.txt"
+absPath = os.path.abspath(pathString)
+
+print(absPath) # result (mac): /Users/username/pythonProjects/text.txt
+
+```
+
 ## Close
 
 Best practice when dealing with files is to close any file that you have opened before your script finishes executing. This is done using the close function.
