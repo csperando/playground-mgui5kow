@@ -136,9 +136,15 @@ If you want to write to a new line, there are several different ways to do this.
 One way is to simply add a newline character after your data in the write method.
 
 `file.write(str(i) + "\n")`
+ 
+ Result:
+```text
+0
+1
+2
+3
+```
 
-You can also use the `writelines()` method that takes an array as an argument:
 
-`file.writelines(["Line 1", "Line 2", "Line 3"])`
 
 
