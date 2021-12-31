@@ -33,7 +33,7 @@ file3 = open("\\path\\to\\file\\file3.txt", "r")
 
 ### File Path String 
 
-When using backslashes in the file path a second `\` character is required to escape the behavior of a single `\` in a string. Depending on your operating system you made need to format this string differently or use forward slashes.
+When using backslashes in the file path a second `\` character may be required to escape the behavior of a single `\` in a string. Depending on your operating system you made need to format this string differently or use forward slashes.
 
 You can also take advantage of the [os.path](https://docs.python.org/3/library/os.path.html) methods.
 
@@ -62,9 +62,47 @@ file.close()
 
 ## How to Actually Use Your Data
 
-This is arguably the most important step in this process. There are a lot of different ways to read and write data, and it all depends on the problem you are trying to solve. Sometimes you have written the data files yourself, and other times you will have to work with someone else's formatting. Below are a couple simple examples for reading and writting a simple text file.
+This is arguably the most important step in this process. There are a lot of different ways to read and write data, and it all depends on the problem you are trying to solve. 
+Sometimes you have written the data files yourself, and other times you will have to work with someone else's formatting. 
+Below are a couple simple examples for reading and writting a simple text file.
 
 ### Reading
+
+First let's look at what results when we open a file and store this data as a variable. We are using a simple text file containing the following:
+
+```text
+Line 1
+Line 2
+Line 3
+```
+
+Using the methods discussed above import the os library to enable the open and close methods, and save the data from the file as a variable we call `file`.
+
+
+```python 
+import os
+
+path = "/Users/username/demoFolder/data.txt"
+file = open(path);
+
+print(type(file))
+
+for line in file:
+    print(line)
+
+file.close()
+```
+
+The results from this script first print the data type of the `file` variable. It is a special data type reserved for os data, but we do not need to go in depth about it now. 
+The main point is that this variable is *iterable*. Using a simple for loop you can read one line at a time. These lines are simple strings and can be manipulated as such.
+
+```console
+ >>> python demo.py 
+ <type 'file'>
+ Line 1
+ Line 2
+ Line 3
+```
 
 ### Writing
 
