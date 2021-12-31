@@ -107,12 +107,12 @@ The main point is that this variable is *iterable*. Using a simple for loop you 
 ```
 
 The additional lines printed between the text file data is a result of carriage return characters in the text file itself. These can be eliminated by 
-using methods like `string.strip()`, may require importing the string library.
+using methods like `string.strip()`, but may require importing the string library.
 
 ### Writing
 
 If you wish to add data to a file, you need to tell python that you plan to *write* data to the file when you use the open method. Then simply use the 
-`write()` or `writeline()` method on the file variable. See example below:
+`write()` or `writelines()` method on the file variable. See example below:
 
 ```python
 import os
@@ -132,7 +132,8 @@ The resulting text file will look as follows:
 0123
 ```
 
-If you want to write to a new line, there are several different ways to do this. One way is to simply add a newline character after your data in the write method.
+If you want to write to a new line, there are several different ways to do this. 
+One way is to simply add a newline character after your data in the write method.
 
 `file.write(str(i) + "\n")`
 
@@ -141,9 +142,3 @@ You can also use the `writelines()` method that takes an array as an argument:
 `file.writelines(["Line 1", "Line 2", "Line 3"])`
 
 
-
-# sys and input()
-
-# Advanced usage
-
-If you want a more complex example (external libraries, viewers...), use the [Advanced Python template](https://tech.io/select-repo/429)
